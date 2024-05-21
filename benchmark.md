@@ -1,5 +1,4 @@
 # MLLM Benchmark整理
-[toc]
 ## 一、常用Benchmark
 ### 1. LLaVA-Bench (In-the-Wild)
 - 来源：``Visual Instruction Tuning`` (LLaVa; NeurIPS23; University of Wisconsin–Madison, Microsoft Research, Columbia University)
