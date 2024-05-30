@@ -78,7 +78,43 @@
 - leaderboard
 ![SEED-Bench_leaderboard](srcs/SEED-Bench_leaderboard.png)
 
-### 7. POPE（重要）
+### 7. MMMU
+- 来源：``A Massive Multi-discipline Multimodal Understanding and Reasoning Benchmark for Expert AGI`` (v2 CVPR2024; IN.AI Research, University of Waterloo, The Ohio State University, Independent, Carnegie Mellon University, University of Victoria, Princeton University)
+- 评测目标: college-level subject knowledge and deliberate reasoning
+- 数据来源：college exams, quizzes, and textbooks
+- 标注：人工标注
+- 输入：question, image
+- 输出：answer
+- 评测：micro-averaged
+- 示例
+![MMMU_example](srcs/MMMU_example.png)
+- leaderboard: Gemini Ultra, GPT-4V, InternVL-Chat-V1.2, Qwen-VL-MAXLLaVA-1.6-34B
+
+### 8. CMMMU
+- 来源：``CMMMU: A Chinese Massive Multi-discipline Multimodal Understanding Benchmark`` (Multimodal Art Projection Research Community Hong Kong University of Science and Technology, University of Waterloo, Chinese Academy of Sciences, University of Chinese Academy of Sciences, Peking University, The Hong Kong Polytechnic University 7Waseda University, University of Manchester, 01.AI)
+- 评测目标: college-level subject knowledge and deliberate reasoning
+- 数据来源：college exams, quizzes, and textbooks
+- 标注：人工标注
+- 输入：question, image
+- 输出：answer
+- 评测：micro-averaged
+- 示例
+![CMMMU_example](srcs/CMMMU_example.png)
+- leaderboard: GPT-4V
+
+### 9. GQA（重要）
+- 来源：``GQA: A New Dataset for Real-World Visual Reasoning and Compositional Question Answering`` (Stanford University)
+- 评测目标：object recognition, commonsense understanding and relation extraction
+- 数据来源：VG (COCO, Flickr)
+- 标注：scene graph
+- 输入：question, image
+- 输出：answer
+- 评测：consistency, validity, plausibility, distribution, grounding, accuracy
+- 示例
+![GQA_example](srcs/GQA_example.png)
+- leaderboard: MoE-LLaVa
+
+### 10. POPE（重要）
 - 来源：``Evaluating Object Hallucination in Large Vision-Language Models`` (EMNLP'23; Renmin University of China, Beijing Key Laboratory of Big Data Management and Analysis Methods)
 - 评测目标：物体幻觉
 - 数据来源：COCO (可按照{"image": "COCO_val2014_000000131089.jpg", "objects": ["person", "baseball bat"]}格式自建)
@@ -88,10 +124,22 @@
 - 评测：accuracy, precision, recall, F1 score
 - 示例
 ![POPE](srcs/POPE.png)
-- leaderboard: LLaVa, MiniGPT-4, InstructBLIP
+- leaderboard: LLaVa, MiniGPT-4, InstructBLIP, InternLM-XComposer2
 
-### 8. RealWorldQA（可能重要）
-- 来源：``HallusionBench: You See What You Think? Or You Think What You See? An Image-Context Reasoning Benchmark Challenging for GPT-4V(ision), LLaVA-1.5, and Other Multi-modality Models`` (xAI)
+### 11. HallusionBench（可能重要）
+- 来源：``HallusionBench: You See What You Think? Or You Think What You See? An Image-Context Reasoning Benchmark Challenging for GPT-4V(ision), LLaVA-1.5, and Other Multi-modality Models`` (CVPR2024; University of Maryland)
+- 评测目标：emphasize nuanced understanding and interpretation of visual data
+- 数据来源：人工选择
+- 标注：人工标注
+- 输入：question, image/video
+- 输出：answer
+- 评测：all accurarcy, figure accuracy, question pair accuracy
+- 示例
+![HallusionBench_example](srcs/HallusionBench_example.png)
+- leaderboard: GPT-4V, Gemini Pro Vision, Claude 3, LLaVA- 1.5, InternLM-XComposer2
+
+### 12. RealWorldQA（重要）
+- 来源：xAI
 - 评测目标：真实世界空间理解
 - 输入：question, image
 - 输出：answer
@@ -204,3 +252,261 @@
 </tr>
 </tbody>
 </table>
+
+## 三、测评结果
+### LLaVa-1.5-7B
+#### 1. LLaVA-Bench (In-the-Wild)
+通过GPT-4进行评测，需要OpenAI_KEY。
+#### 2. MME
+##### 1）分数
+| perception | reasoning | OCR | artwork | celebrity | code_reasoning | color | commonsense_reasoning | count | existence | landmark | numerical_calculation | position | posters | scene | text_translation |
+|------------|-----------|-----|---------|-----------|----------------|-------|-----------------------|-------|-----------|----------|-----------------------|----------|---------|-------|------------------|
+| 1516       | 302       | 132 | 119     | 132       | 60             | 170   | 117                   | 160   | 195       | 160      | 67                    | 153      | 136     | 157   | 58               |
+##### 2）失败案例
+###### color
+```
+# MME_color/000000012120.jpg
+Is there a blue court in the image? Please answer yes or no.	Yes |Yes
+Is there a purple court in the image? Please answer yes or no.	No  |Yes
+```
+![MME/color/000000012120.jpg](srcs/MME/color/000000012120.jpg)
+```
+# color/000000028993.jpg
+Are there yellow poles in the image? Please answer yes or no.	Yes |Yes
+Are there blue poles in the image? Please answer yes or no.	No  |Yes
+```
+![MME/color/000000028993.jpg](srcs/MME/color/000000028993.jpg)
+```
+# color/000000055072.jpg
+Is there a brown giraffe in the image?  Please answer yes or no.	Yes |No
+Is there a black giraffe in the image? Please answer yes or no.	No  |No
+```
+![MME/color/000000055072.jpg](srcs\MME\color\000000055072.jpg)
+```
+# color/000000057597.jpg
+Are there any red shoes in the image? Please answer yes or no.	Yes |Yes
+Are there any yellow shoes in the image? Please answer yes or no.	No  |Yes
+```
+![MME/color/000000057597.jpg](srcs\MME\color\000000057597.jpg)
+```
+# color/000000427034.jpg
+Is there a brown and black dog in the image? Please answer yes or no.	Yes |Yes
+Is there a brown and white dog in the image? Please answer yes or no.	No  |Yes
+```
+![MME/color/000000427034.jpg](srcs\MME\color\000000427034.jpg)
+```
+# color/000000530457.jpg
+Are there any red flowers in the image? Please answer yes or no.	Yes |Yes
+Are there any green flowers in the image? Please answer yes or no.	No  |Yes
+```
+![MME/color/000000530457.jpg](srcs\MME\color\000000530457.jpg)
+###### commonsense reasoning
+```
+#MME/commonsense_reasoning/0058.png
+Can't I smoke here? Please answer yes or no.	Yes |No
+May I smoke here? Please answer yes or no.	No  |No
+```
+![MME/commonsense_reasoning/0058.png](srcs/MME/commonsense_reasoning/0058.png)
+###### count
+```
+#count/000000067213.jpg
+Is there only one dog in the image? Please answer yes or no.	Yes |No
+Is there two dogs in the image? Please answer yes or no.	No  |No
+```
+![MME/count/000000067213.jpg](srcs/MME/count/000000067213.jpg)
+###### existence
+```
+#MME/existence/000000009590.jpg
+Is there two bottles in the image? Please answer yes or no.
+Is there a bottle in this image? Please answer yes or no.
+```
+![MME/existence/000000009590.jpg](srcs/MME/existence/000000009590.jpg)
+###### position
+```
+#MME/position/000000031248.jpg
+Is there a sofa in the middle of potted plants in the image? Please answer yes or no.	Yes |No
+Is there a sofa in the right side of potted plants in the image? Please answer yes or no.	No  |Yes
+```
+![MME/position/000000031248.jpg](srcs/MME/position/000000031248.jpg)
+###### scene
+假阴较多。
+```
+#MME/scene/images/Places365_val_00000001.jpg
+Is this picture captured in a place of greenhouse indoor? Please answer yes or no.	Yes |No
+Is this picture captured in a place of waiting room? Please answer yes or no.	No  |No
+```
+![MME/scene/images/Places365_val_00000001.jpg](srcs/MME/scene/images/Places365_val_00000001.jpg)
+#### 3. MMBench
+#### 4. MM-Vet
+通过GPT-4进行评测，需要OpenAI_KEY。 
+#### 5. SEED-Bench
+##### 1）分数
+| split | Overall | Instance Attributes | Instance Identity | Instance Interaction | Instance Location | Instances Counting | Scene Understanding | Spatial Relation | Text Understanding | Visual Reasoning |
+|-------|---------|---------------------|-------------------|----------------------|-------------------|--------------------|---------------------|------------------|--------------------|------------------|
+| none  | 0.66    | 0.67                | 0.69              | 0.71                 | 0.60              | 0.58               | 0.74                | 0.51             | 0.37               | 0.77             |
+##### 2）失败案例
+###### Scene Understanding
+```
+Which of the following can be inferred from the image?
+
+The street is located in a mountainous region
+The street is located in a rural area with a small population
+The street is located in a densely populated urban area
+The buildings in the street are of modern style and architecture
+
+D   |C
+```
+![SEED-Bench/175.jpg](srcs/SEED-Bench/175.jpg)
+###### Instance Identity
+```
+Which of the following items are NOT visible in the image?
+
+Trumpet
+Drumsticks
+Piano
+Microphone
+
+B   |A
+```
+![SEED-Bench/295.jpg](srcs/SEED-Bench/295.jpg)
+###### Instance Attributes
+color, shape, ...
+```
+What color is the girl's shirt?
+Maroon	Green	Pink	Blue
+D   |C
+```
+![SEED-Bench/188.jpg](srcs/SEED-Bench/188.jpg)
+###### Instance Location
+```
+Where are the bride and groom positioned in the image?
+
+They are sitting in front of a stained glass window
+They are standing in front of a large stained glass window
+They are sitting next to each other on a bench
+They are standing at the altar with a priest
+
+B   |D
+```
+![SEED-Bench/117.jpg](srcs/SEED-Bench/117.jpg)
+###### Instances Counting
+```
+How many people are in the image?
+
+One
+Two
+Three
+Four
+
+C   |B
+```
+![SEED-Bench/319.jpg](srcs/SEED-Bench/319.jpg)
+###### Spatial Relation
+```
+What is the position of the cars on the street relative to the buildings?
+
+Parked in front of the buildings
+Driving down the street
+Parked in the middle of the street
+Parked along the sides of the street
+
+D   |A
+```
+![SEED-Bench/46.jpg](srcs/SEED-Bench/46.jpg)
+###### Instance Interaction
+```
+What is the relation between the beach and the water in the image?
+The beach is parallel to the water
+The beach is perpendicular to the water
+The beach is higher than the water
+The beach is lower than the water
+
+C   |D
+```
+![SEED-Bench/1974.jpg](srcs/SEED-Bench/1974.jpg)
+###### Visual Reasoning
+```
+What is the man pushing in the image?
+
+A cart filled with fruits and vegetables
+A shopping cart
+A stroller with a child
+A suitcase
+
+A   |B
+```
+![SEED-Bench/331.jpg](srcs/SEED-Bench/331.jpg)
+#### 6. GQA
+#### 7. POPE
+##### 1）分数
+| split       | Overall | acc | precision | recall |
+|-------------|---------|-----|-----------|--------|
+| Overall     | 86      | 87  | 92        | 81     |
+| adversarial | 84      | 84  | 87        | 81     |
+| popular     | 86      | 87  | 92        | 81     |
+| random      | 88      | 89  | 96        | 81     |
+##### 2）失败案例
+###### adversarial
+```
+Is there a spoon in the image? Please answer yes or no.	Yes |No
+```
+![POPE/18.jpg](srcs/POPE/18.jpg)
+###### popular
+```
+Is there a chair in the image? Please answer yes or no. No  |Yes
+```
+![POPE/3.jpg](srcs/POPE/3.jpg)
+###### random
+```
+Is there a dog in the image? Please answer yes or no. No    |Yes
+```
+![POPE/136.jpg](srcs/POPE/136.jpg)
+#### 8. HallusionBench
+通过GPT-4进行评测，需要OpenAI_KEY。
+#### 9. RealWorldQA
+##### 1）分数
+0.54
+##### 2）失败案例
+count
+```
+How many bars are here?
+
+There are two parallel bars in this photo.
+There are three bars in the photo. two are the same height and one is higher.
+There are two bars in this photo. one is high and one is low.
+
+B   |A
+```
+![RealWorldQA/1.jpg](srcs/RealWorldQA/1.jpg)
+ocr
+```
+What is the speed limit on this road?
+
+25
+35
+45
+
+B   |A
+```
+![RealWorldQA/4.jpg](srcs/RealWorldQA/4.jpg)
+commonsense_reasoning
+```
+Are we required to stop?
+
+Yes
+No
+
+A   |B
+```
+![RealWorldQA/6.jpg](srcs/RealWorldQA/6.jpg)
+color
+```
+What color is the nearest set of traffic lights in this scene?
+
+Red
+Green
+Yellow
+
+A   |B
+```
+![RealWorldQA/24.jpg](srcs/RealWorldQA/24.jpg)
