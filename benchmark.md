@@ -264,6 +264,7 @@
 | 1516       | 302       | 132 | 119     | 132       | 60             | 170   | 117                   | 160   | 195       | 160      | 67                    | 153      | 136     | 157   | 58               |
 ##### 2）失败案例
 ###### color
+假阳较多。
 ```
 # MME_color/000000012120.jpg
 Is there a blue court in the image? Please answer yes or no.	Yes |Yes
@@ -273,61 +274,148 @@ Is there a purple court in the image? Please answer yes or no.	No  |Yes
 ```
 # color/000000028993.jpg
 Are there yellow poles in the image? Please answer yes or no.	Yes |Yes
-Are there blue poles in the image? Please answer yes or no.	No  |Yes
+Are there blue poles in the image? Please answer yes or no.	    No  |Yes
 ```
 ![MME/color/000000028993.jpg](srcs/MME/color/000000028993.jpg)
 ```
 # color/000000055072.jpg
 Is there a brown giraffe in the image?  Please answer yes or no.	Yes |No
-Is there a black giraffe in the image? Please answer yes or no.	No  |No
+Is there a black giraffe in the image? Please answer yes or no.	    No  |No
 ```
-![MME/color/000000055072.jpg](srcs\MME\color\000000055072.jpg)
+![MME/color/000000055072.jpg](srcs/MME/color/000000055072.jpg)
 ```
 # color/000000057597.jpg
-Are there any red shoes in the image? Please answer yes or no.	Yes |Yes
+Are there any red shoes in the image? Please answer yes or no.	    Yes |Yes
 Are there any yellow shoes in the image? Please answer yes or no.	No  |Yes
 ```
-![MME/color/000000057597.jpg](srcs\MME\color\000000057597.jpg)
+![MME/color/000000057597.jpg](srcs/MME/color/000000057597.jpg)
 ```
 # color/000000427034.jpg
 Is there a brown and black dog in the image? Please answer yes or no.	Yes |Yes
 Is there a brown and white dog in the image? Please answer yes or no.	No  |Yes
 ```
-![MME/color/000000427034.jpg](srcs\MME\color\000000427034.jpg)
+![MME/color/000000427034.jpg](srcs/MME/color/000000427034.jpg)
 ```
 # color/000000530457.jpg
 Are there any red flowers in the image? Please answer yes or no.	Yes |Yes
 Are there any green flowers in the image? Please answer yes or no.	No  |Yes
 ```
-![MME/color/000000530457.jpg](srcs\MME\color\000000530457.jpg)
+![MME/color/000000530457.jpg](srcs/MME/color/000000530457.jpg)
 ###### commonsense reasoning
+准确率较低，视觉层面上包含ocr、物体识别等。
 ```
 #MME/commonsense_reasoning/0058.png
 Can't I smoke here? Please answer yes or no.	Yes |No
-May I smoke here? Please answer yes or no.	No  |No
+May I smoke here? Please answer yes or no.	    No  |No
 ```
 ![MME/commonsense_reasoning/0058.png](srcs/MME/commonsense_reasoning/0058.png)
 ###### count
 ```
 #count/000000067213.jpg
-Is there only one dog in the image? Please answer yes or no.	Yes |No
-Is there two dogs in the image? Please answer yes or no.	No  |No
+Is there only one dog in the image? Please answer yes or no.	Yes |No (No, there are two dogs in the image.
+)
+Is there two dogs in the image? Please answer yes or no.	    No  |No
 ```
 ![MME/count/000000067213.jpg](srcs/MME/count/000000067213.jpg)
+```
+#count/000000236721.jpg
+Are there two bananas in the image? Please answer yes or no.	Yes |Yes
+Are there three bananas in the image? Please answer yes or no.	No  |Yes
+```
+![MME/count/000000236721.jpg](srcs/MME/count/000000236721.jpg)
+```
+#count/000000423944.jpg
+Is there no person in this picture? Please answer yes or no.	    Yes |No
+Are there two people appear in this image? Please answer yes or no.	No  |No
+```
+![MME/count/000000423944.jpg](srcs/MME/count/000000423944.jpg)
+```
+#count/000000430286.jpg
+Are there three remotes in this image? Please answer yes or no.	    Yes |Yes
+Are there only two remotes in this image? Please answer yes or no.	No  |Yes
+```
+![MME/count/000000430286.jpg](srcs/MME/count/000000430286.jpg)
+```
+#count/000000432468.jpg
+Are there three zippers in the picture? Please answer yes or no.	Yes |Yes
+Is there a zipper in the picture? Please answer yes or no.	        No  |Yes
+```
+![MME/count/000000432468.jpg](srcs/MME/count/000000432468.jpg)
+```
+#count/000000434479.jpg
+Are there two pieces of pizza in this image? Please answer yes or no.       Yes |No (No, there is only one piece of pizza in the image.)
+Is there only one piece of pizza in this image? Please answer yes or no.    No  |No
+```
+![MME/count/000000434479.jpg](srcs/MME/count/000000434479.jpg)
+```
+#count/000000450303.jpg
+Are there six people appear in this image? Please answer yes or no.     Yes |No (No, there are only five people in the image.)
+Are there seven people appear in this image? Please answer yes or no.	No  |No
+```
+![MME/count/000000450303.jpg](srcs/MME/count/000000450303.jpg)
+```
+#count/000000470121.jpg
+Is there only one bottle in the image? Please answer yes or no.	Yes |Yes
+Is there two bottles in the image? Please answer yes or no.	No  |Yes
+```
+![MME/count/000000470121.jpg](srcs/MME/count/000000470121.jpg)
 ###### existence
 ```
 #MME/existence/000000009590.jpg
-Is there two bottles in the image? Please answer yes or no.
-Is there a bottle in this image? Please answer yes or no.
+Is there a bottle in this image? Please answer yes or no.   Yes |No
+Is there a scissors in this image? Please answer yes or no. No  |No
 ```
 ![MME/existence/000000009590.jpg](srcs/MME/existence/000000009590.jpg)
 ###### position
+假阳较多。
 ```
 #MME/position/000000031248.jpg
-Is there a sofa in the middle of potted plants in the image? Please answer yes or no.	Yes |No
+Is there a sofa in the middle of potted plants in the image? Please answer yes or no.	        Yes |No
 Is there a sofa in the right side of potted plants in the image? Please answer yes or no.	No  |Yes
 ```
 ![MME/position/000000031248.jpg](srcs/MME/position/000000031248.jpg)
+```
+#position/000000056127.jpg
+Is the light above the fire hydrant in the image? Please answer yes or no.	Yes |Yes
+Is the light under the fire hydrant in the image?  Please answer yes or no.	No  |Yes
+```
+![MME/position/000000056127.jpg](srcs/MME/position/000000056127.jpg)
+```
+#position/000000097994.jpg
+Is the light above the computer in the image? Please answer yes or no.	Yes |Yes
+Is the light under the computer in the image? Please answer yes or no.	No  |Yes
+```
+![MME/position/000000097994.jpg](srcs/MME/position/000000097994.jpg)
+```
+#position/000000212800.jpg
+Is the blue umbrella under the black umbrella? Please answer yes or no.	Yes |Yes
+Is the blue umbrella above the black umbrella? Please answer yes or no.	No  |Yes
+```
+![MME/position/000000212800.jpg](srcs/MME/position/000000212800.jpg)
+```
+position/000000450303.jpg
+Is the monitor on top of a person? Please answer yes or no.	Yes |No
+Is the monitor under the person? Please answer yes or no.	No  |No
+```
+![MME/position/000000450303.jpg](srcs/MME/position/000000450303.jpg)
+```
+Is the person under the kite? Please answer yes or no.	Yes |Yes
+Is the person above the kite? Please answer yes or no.	No  |Yes
+```
+![MME/position/000000477955.jpg](srcs/MME/position/000000477955.jpg)
+```
+#position/000000530162.jpg
+Is the big red and black umbrella on the top of people? Please answer yes or no.	Yes |Yes
+Is the big red and black umbrella under people? Please answer yes or no.	No  |Yes
+```
+![MME/position/000000530162.jpg](srcs/MME/position/000000530162.jpg)
+
+```
+#position/000000578922.jpg
+Is the vase on the left of the toothbrush? Please answer yes or no.	Yes |Yes
+Is the vase on the right of the toothbrush? Please answer yes or no.	No  |Yes
+```
+![MME/position/000000578922.jpg](srcs/MME/position/000000578922.jpg)
 ###### scene
 假阴较多。
 ```
@@ -478,17 +566,6 @@ There are two bars in this photo. one is high and one is low.
 B   |A
 ```
 ![RealWorldQA/1.jpg](srcs/RealWorldQA/1.jpg)
-ocr
-```
-What is the speed limit on this road?
-
-25
-35
-45
-
-B   |A
-```
-![RealWorldQA/4.jpg](srcs/RealWorldQA/4.jpg)
 commonsense_reasoning
 ```
 Are we required to stop?
