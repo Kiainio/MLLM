@@ -269,46 +269,145 @@
 # MME_color/000000012120.jpg
 Is there a blue court in the image? Please answer yes or no.	Yes |Yes
 Is there a purple court in the image? Please answer yes or no.	No  |Yes
+
+USER: Is there a purple court in the image? Please answer yes or no.
+ASSISTANT: Yes, there is a purple court in the image.
+USER: Please give an explanation of the answer.
+ASSISTANT: The image features a purple tennis court where a tennis match is taking place.
+USER: describe the picture
+ASSISTANT:  The image is a tennis court with a purple surface, where a tennis match is taking place. There are several people on the court, including a woman who is holding a tennis racket, and a man who is also holding a tennis racket. The scene captures the intensity and action of the match, with the players actively engaged in the game.
 ```
 ![MME/color/000000012120.jpg](srcs/MME/color/000000012120.jpg)
+"a court"
+![MME/color/000000012120_a court.jpg](srcs/MME/color/000000012120_a_court.jpg)
+"a blue court"
+![MME/color/000000012120_a_blue_court.jpg](srcs/MME/color/000000012120_a_blue_court.jpg)
+"a purple court"
+![MME/color/000000012120_a_purple_court.jpg](srcs/MME/color/000000012120_a_purple_court.jpg)
 ```
 # color/000000028993.jpg
-Are there yellow poles in the image? Please answer yes or no.	Yes |Yes
-Are there blue poles in the image? Please answer yes or no.	    No  |Yes
+Are there yellow poles in the image? Please answer yes or no.	Yes |No
+Are there blue poles in the image? Please answer yes or no.	    No  |No
+
+'please describe the picture'
+'The image features a city street with four large, golden fire hydrants lined up along the sidewalk. These fire hydrants are placed at regular intervals, providing a sense of order and organization in the urban environment. \n\nIn addition to the fire hydrants, there are several people walking along the sidewalk, going about their daily activities. Some of them are closer to the foreground, while others are further away, creating a sense of depth and activity in the scene.'
+'are there poles in the image? are they yellow?'
+'Yes, there are poles in the image, and they are yellow.'
+'are there poles in the image? are they blue?'
+'Yes, there are poles in the image, and they are blue.'
 ```
 ![MME/color/000000028993.jpg](srcs/MME/color/000000028993.jpg)
+"poles"
+![MME/color/000000028993_poles.jpg](srcs/MME/color/000000028993_poles.jpg)
+"yellow poles"
+![MME/color/000000028993_yellow_poles.jpg](srcs/MME/color/000000028993_yellow_poles.jpg)
+"blue poles"
+![MME/color/000000028993_blue_poles.jpg](srcs/MME/color/000000028993_blue_poles.jpg)
 ```
 # color/000000055072.jpg
 Is there a brown giraffe in the image?  Please answer yes or no.	Yes |No
 Is there a black giraffe in the image? Please answer yes or no.	    No  |No
 ```
 ![MME/color/000000055072.jpg](srcs/MME/color/000000055072.jpg)
+"a giraffe"
+![MME/color/000000055072_a_giraffe.jpg](srcs/MME/color/000000055072_a_giraffe.jpg)
+"brown giraffe"
+![MME/color/000000055072_a_brown_giraffe.jpg](srcs/MME/color/000000055072_a_brown_giraffe.jpg)
+"a black giraffe"
+![MME/color/000000055072_a_black_giraffe.jpg](srcs/MME/color/000000055072_a_black_giraffe.jpg)
 ```
 # color/000000057597.jpg
 Are there any red shoes in the image? Please answer yes or no.	    Yes |Yes
 Are there any yellow shoes in the image? Please answer yes or no.	No  |Yes
 ```
 ![MME/color/000000057597.jpg](srcs/MME/color/000000057597.jpg)
+"shoes"
+![MME/color/000000057597_shoes.jpg](srcs/MME/color/000000057597_shoes.jpg)
+"red shoes"
+![MME/color/000000057597_red_shoes.jpg](srcs/MME/color/000000057597_red_shoes.jpg)
+"yellow shoes"
+![MME/color/000000057597_yellow_shoes.jpg](srcs/MME/color/000000057597_yellow_shoes.jpg)
 ```
 # color/000000427034.jpg
 Is there a brown and black dog in the image? Please answer yes or no.	Yes |Yes
-Is there a brown and white dog in the image? Please answer yes or no.	No  |Yes
+Is there a brown and black dog in the image? Please answer yes or no.	No  |Yes
 ```
 ![MME/color/000000427034.jpg](srcs/MME/color/000000427034.jpg)
+"a dog"
+![MME/color/000000427034_a_dog.jpg](srcs/MME/color/000000427034_a_dog.jpg)
+"a brown and black dog"
+![MME/color/000000427034_a_brown_and_black_dog.jpg](srcs/MME/color/000000427034_a_brown_and_black_dog.jpg)
+"a brown and white dog"
+![MME/color/000000427034_a_brown_and_white_dog.jpg](srcs/MME/color/000000427034_a_brown_and_white_dog.jpg)
 ```
 # color/000000530457.jpg
 Are there any red flowers in the image? Please answer yes or no.	Yes |Yes
 Are there any green flowers in the image? Please answer yes or no.	No  |Yes
 ```
 ![MME/color/000000530457.jpg](srcs/MME/color/000000530457.jpg)
+"flowers"
+![MME/color/000000530457_flowers.jpg](srcs/MME/color/000000530457_flowers.jpg)
+"red flowers"
+![MME/color/000000530457_red_flowers.jpg](srcs/MME/color/000000530457_red_flowers.jpg)
+"green flowers"
+![MME/color/000000530457_green_flowers.jpg](srcs/MME/color/000000530457_green_flowers.jpg)
 ###### commonsense reasoning
 准确率较低，视觉层面上包含ocr、物体识别等。
 ```
 #MME/commonsense_reasoning/0058.png
 Can't I smoke here? Please answer yes or no.	Yes |No
 May I smoke here? Please answer yes or no.	    No  |No
+
+USER: Describe the picture
+ASSISTANT: The image features a white wall with a sign posted on it, likely in a foreign language. The sign is placed near the top of the wall, and it appears to be a no-smoking sign. The wall is clean and devoid of any other decorations or signs. The overall setting seems to be a simple, uncluttered space.
+USER: Can't I smoke here? Please answer yes or no.
+ASSISTANT: No.
+USER: May I smoke here? Please answer yes or no.
+ASSISTANT: No.
 ```
 ![MME/commonsense_reasoning/0058.png](srcs/MME/commonsense_reasoning/0058.png)
+"a sign of 'no smoking'"
+![MME/commonsense_reasoning/0058.png](srcs/MME/commonsense_reasoning/0058_a_sign_of_no_smoking.png)
+```
+#MME/commonsense_reasoning/003.png
+May I ask if in the game of finger-guessing game, did the right side of the picture win? Please answer yes or no.   Yes |Yes
+May I ask if in the game of finger-guessing game, did the left side of the picture win? Please answer yes or no.   No  |Yes
+
+
+USER: describe the picture
+ASSISTANT: The image features two yellow hands, one on the left side and the other on the right side, placed side by side. The hands are positioned in a way that they appear to be punching, giving the impression of a boxing or fighting scene. The hands are the main focus of the image, with no other objects or elements visible.
+USER: if this is a game of finger-guessing game, what do these two hands represent?      
+ASSISTANT: If this is a game of finger-guessing, the two hands represent the fingers of the players who are participating in the game. The hands are placed side by side, and the objective of the game is to guess which finger belongs to which hand. The players take turns, and the goal is to correctly identify the fingers of the other player by feeling the hand without looking at it. This can be a fun and engaging activity for people of all ages, as it requires good observation skills and communication between the players.
+USER: who will win the game in this picture? Left or right?
+ASSISTANT:  In this image, it is not possible to determine who will win the game, as it is just a representation of the hands and not a real-life scenario. The outcome of the game would depend on the players' skills, luck, and strategy. In a real-life scenario, the players would need to communicate and cooperate to determine the correct fingers and ultimately win the game.
+```
+![MME/commonsense_reasoning/0003.png](srcs/MME/commonsense_reasoning/0003.png)
+```
+commonsense_reasoning/0005.png
+The office's normal closing time is 5 p.m. Now is afternoon. Should I continue to work at the time shown in the picture? Please answer yes or no.   Yes |Yes
+The office's normal closing time is 5 p.m. Now is afternoon. Could I leave work at the time shown in the picture? Please answer yes or no.      No  |Yes
+
+USER: describe the picture
+ASSISTANT: The image features a person wearing a blue shirt and a blue and black watch on their left wrist. The watch has a blue face and is positioned towards the center of the person's arm. The person is also wearing a blue shirt, which complements the watch's color. The scene is set on a white surface, which provides a clean and minimalistic backdrop for the watch and the person.
+USER: what time is it?
+ASSISTANT: The time displayed on the watch is 10:10.
+USER: can you read the time from the watch?
+ASSISTANT:  Yes, the time on the watch is 10:10.
+```
+![MME/commonsense_reasoning/0005.png](srcs/MME/commonsense_reasoning/0005.png)
+```
+commonsense_reasoning/0010.png
+I am going to exercise and I want to choose a venue. Is the venue in the picture a good choice? Please answer yes or no.	Yes |Yes
+I am going to study and I want to choose a venue. Is the venue in the picture a good choice? Please answer yes or no.	No  |Yes
+
+USER: describe the picture
+ASSISTANT: The image depicts a large gym with a variety of exercise equipment, including several treadmills, a row of bikes, and a couple of benches. The treadmills are placed in different areas of the gym, with some closer to the center and others near the edges. The bikes are arranged in a row, with some closer to the center and others towards the right side of the gym. The benches are located near the right side of the gym, with one closer to the center and the other further back.
+
+The gym is well-lit, with a bright overhead light illuminating the space. The overall atmosphere of the gym is inviting and encourages physical activity.
+USER: I am going to study and I want to choose a venue. Is the venue in the picture a good choice? Please answer yes or no.
+ASSISTANT: Yes, the gym in the picture would be a good choice for studying. The bright and well-lit environment, along with the availability of exercise equipment, can create a conducive atmosphere for concentration and focus. Additionally, the presence of other people in the gym might provide a sense of motivation and accountability for those who are studying.
+```
+![MME/commonsense_reasoning/0010.png](srcs/MME/commonsense_reasoning/0010.png)
 ###### count
 ```
 #count/000000067213.jpg
@@ -587,3 +686,10 @@ Yellow
 A   |B
 ```
 ![RealWorldQA/24.jpg](srcs/RealWorldQA/24.jpg)
+## 四、测评方法
+```
+python -m llava.serve.cli \
+    --model-path liuhaotian/llava-v1.5-7b \
+    --image-file "https://llava-vl.github.io/static/images/view.jpg" \
+    --load-4bit
+```
